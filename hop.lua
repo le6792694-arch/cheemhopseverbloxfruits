@@ -1,13 +1,115 @@
---[[ Protected by Lua Guard ]]
+-- CHEEM HOP | Make by ducskibidi
 
-( function (...) local Players = game:GetService("\080\108\097\121\101\114\115") local TeleportService = game:GetService("\084\101\108\101\112\111\114\116\083\101\114\118\105\099\101") local HttpService = game:GetService("\072\116\116\112\083\101\114\118\105\099\101") local _lIlllllllI = Players.LocalPlayer if _lIlllllllI.PlayerGui:FindFirstChild("\067\104\101\101\109\072\111\112") then _lIlllllllI.PlayerGui.CheemHop:Destroy() end
- local _IlIIIIlllI = Instance.new("\083\099\114\101\101\110\071\117\105") _IlIIIIlllI.Name = "\067\104\101\101\109\072\111\112" _IlIIIIlllI.Parent = _lIlllllllI.PlayerGui _IlIIIIlllI.ResetOnSpawn = false local _lIIllllIII = Instance.new("\070\114\097\109\101", _IlIIIIlllI) _lIIllllIII.Size = UDim2.new(0x0,0x12C,0x0,0x96) _lIIllllIII.Position = UDim2.new(0.5,-0x96,0.5,-0x4B) _lIIllllIII.BackgroundColor3 = Color3.fromRGB(0x23,0x23,0x23) _lIIllllIII.Active = true _lIIllllIII.Draggable = true local _lIIIIlIIII = Instance.new("\084\101\120\116\076\097\098\101\108", _lIIllllIII) _lIIIIlIIII.Size = UDim2.new(0x1,0x0,0x0,0x28) _lIIIIlIIII.BackgroundColor3 = Color3.fromRGB(0x14,0x14,0x14) _lIIIIlIIII.TextColor3 = Color3.fromRGB(0x0,0xFF,0xFF) _lIIIIlIIII.TextScaled = true _lIIIIlIIII.Font = Enum.Font.GothamBold _lIIIIlIIII.Text = "\067\104\101\101\109\032\072\111\112\032\124\032\077\097\107\101\032\098\121\032\100\117\099\115\107\105\098\105\100\105" local function _llIlIllllI(text, yPos, callback) local _lIlIlIIIII = Instance.new("\084\101\120\116\066\117\116\116\111\110", _lIIllllIII) _lIlIlIIIII.Size = UDim2.new(0.9,0x0,0x0,0x28) _lIlIlIIIII.Position = UDim2.new(0.05,0x0,0x0,yPos) _lIlIlIIIII.BackgroundColor3 = Color3.fromRGB(0x3C,0x3C,0x3C) _lIlIlIIIII.TextColor3 = Color3.new(0x1,0x1,0x1) _lIlIlIIIII.TextScaled = true _lIlIlIIIII.Text = text _lIlIlIIIII.MouseButton1Click:Connect(callback) end
- _llIlIllllI("\072\111\112\032\082\097\110\100\111\109\032\083\101\114\118\101\114", 0x32, function () TeleportService:Teleport(game.PlaceId) end
- ) _llIlIllllI("\072\111\112\032\076\111\119\032\080\108\097\121\101\114\032\083\101\114\118\101\114", 0x5F, function () local _IlIIllllIl = game.PlaceId local _IlIIIlIlIl = {} local _IIIlIlllIl = "" repeat local _IIIllIIlIl = "\104\116\116\112\115\058\047\047\103\097\109\101\115\046\114\111\098\108\111\120\046\099\111\109\047\118\049\047\103\097\109\101\115\047"..placeId.."\047\115\101\114\118\101\114\115\047\080\117\098\108\105\099\063\115\111\114\116\079\114\100\101\114\061\065\115\099\038\108\105\109\105\116\061\049\048\048"..(_IIIlIlllIl ~= "" and "\038\099\117\114\115\111\114\061"..cursor or "") local _IIlIIlIlIl = HttpService:JSONDecode(game:HttpGet(_IIIllIIlIl)) for _, server in pairs(_IIlIIlIlIl.data) do if server.playing < server.maxPlayers and server.playing > 0x0 then table.insert(_IlIIIlIlIl, server) end
- end
- _IIIlIlllIl = _IIlIIlIlIl.nextPageCursor until not _IIIlIlllIl or #_IlIIIlIlIl > 0x0 if #_IlIIIlIlIl > 0x0 then local _lIIIlIIIIl = _IlIIIlIlIl[math.random(0x1,#_IlIIIlIlIl)] TeleportService:TeleportToPlaceInstance(_IlIIllllIl, _lIIIlIIIIl.id, _lIlllllllI) end
- end
- ) local _llllIllllI = Instance.new("\083\099\114\101\101\110\071\117\105") _llllIllllI.Name = "\067\104\101\101\109\083\111\099\105\097\108" _llllIllllI.Parent = _lIlllllllI.PlayerGui _llllIllllI.ResetOnSpawn = false local _IIIlIIlIll = Instance.new("\070\114\097\109\101", _llllIllllI) _IIIlIIlIll.Size = UDim2.new(0x0,0xDC,0x0,0x96) _IIIlIIlIll.Position = UDim2.new(0.5,0xA0,0.5,-0x4B) _IIIlIIlIll.BackgroundColor3 = Color3.fromRGB(0x23,0x23,0x23) _IIIlIIlIll.Active = true _IIIlIIlIll.Draggable = true local _IlllllIlIl = Instance.new("\084\101\120\116\076\097\098\101\108", _IIIlIIlIll) _IlllllIlIl.Size = UDim2.new(0x1,0x0,0x0,0x28) _IlllllIlIl.BackgroundColor3 = Color3.fromRGB(0x14,0x14,0x14) _IlllllIlIl.TextColor3 = Color3.fromRGB(0xFF,0xC8,0x0) _IlllllIlIl.TextScaled = true _IlllllIlIl.Font = Enum.Font.GothamBold _IlllllIlIl.Text = "\083\117\112\112\111\114\116\032\077\101\032\10084\65039" local function _lllIIIllll(text, yPos, link) local _lIlIlIIIII = Instance.new("\084\101\120\116\066\117\116\116\111\110", _IIIlIIlIll) _lIlIlIIIII.Size = UDim2.new(0.9,0x0,0x0,0x28) _lIlIlIIIII.Position = UDim2.new(0.05,0x0,0x0,yPos) _lIlIlIIIII.BackgroundColor3 = Color3.fromRGB(0x46,0x46,0x46) _lIlIlIIIII.TextColor3 = Color3.new(0x1,0x1,0x1) _lIlIlIIIII.TextScaled = true _lIlIlIIIII.Text = text _lIlIlIIIII.MouseButton1Click:Connect( function () setclipboard(link) end
- ) end
- _lllIIIllll("\083\117\098\115\099\114\105\098\101\032\111\110\032\089\111\117\084\117\098\101", 0x32, "\104\116\116\112\115\058\047\047\121\111\117\116\117\098\101\046\099\111\109\047") _lllIIIllll("\070\111\108\108\111\119\032\111\110\032\084\105\107\084\111\107", 0x5F, "\104\116\116\112\115\058\047\047\116\105\107\116\111\107\046\099\111\109\047") end
- )(...)
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
+
+local player = Players.LocalPlayer
+
+-- Xoá GUI cũ nếu có
+if player.PlayerGui:FindFirstChild("CheemHop") then
+	player.PlayerGui.CheemHop:Destroy()
+end
+
+-- GUI
+local gui = Instance.new("ScreenGui")
+gui.Name = "CheemHop"
+gui.Parent = player.PlayerGui
+gui.ResetOnSpawn = false
+
+local main = Instance.new("Frame", gui)
+main.Size = UDim2.new(0,300,0,150)
+main.Position = UDim2.new(0.5,-150,0.5,-75)
+main.BackgroundColor3 = Color3.fromRGB(35,35,35)
+main.Active = true
+main.Draggable = true
+
+local title = Instance.new("TextLabel", main)
+title.Size = UDim2.new(1,0,0,40)
+title.BackgroundColor3 = Color3.fromRGB(20,20,20)
+title.TextColor3 = Color3.fromRGB(0,255,255)
+title.TextScaled = true
+title.Font = Enum.Font.GothamBold
+title.Text = "Cheem Hop | Make by ducskibidi"
+
+local function createButton(text, yPos, callback)
+	local btn = Instance.new("TextButton", main)
+	btn.Size = UDim2.new(0.9,0,0,40)
+	btn.Position = UDim2.new(0.05,0,0,yPos)
+	btn.BackgroundColor3 = Color3.fromRGB(60,60,60)
+	btn.TextColor3 = Color3.new(1,1,1)
+	btn.TextScaled = true
+	btn.Text = text
+	
+	btn.MouseButton1Click:Connect(callback)
+end
+
+-- 1️⃣ Hop random server
+createButton("Hop Random Server", 50, function()
+	TeleportService:Teleport(game.PlaceId)
+end)
+
+-- 2️⃣ Hop server ít người
+createButton("Hop Low Player Server", 95, function()
+
+	local placeId = game.PlaceId
+	local servers = {}
+	local cursor = ""
+
+	repeat
+		local url = "https://games.roblox.com/v1/games/"..placeId.."/servers/Public?sortOrder=Asc&limit=100"..(cursor ~= "" and "&cursor="..cursor or "")
+		local response = HttpService:JSONDecode(game:HttpGet(url))
+		
+		for _, server in pairs(response.data) do
+			if server.playing < server.maxPlayers and server.playing > 0 then
+				table.insert(servers, server)
+			end
+		end
+		
+		cursor = response.nextPageCursor
+	until not cursor or #servers > 0
+
+	if #servers > 0 then
+		local chosen = servers[math.random(1,#servers)]
+		TeleportService:TeleportToPlaceInstance(placeId, chosen.id, player)
+	end
+end)
+-- SOCIAL GUI (đặt cạnh Cheem Hop)
+
+local socialGui = Instance.new("ScreenGui")
+socialGui.Name = "CheemSocial"
+socialGui.Parent = player.PlayerGui
+socialGui.ResetOnSpawn = false
+
+local socialMain = Instance.new("Frame", socialGui)
+socialMain.Size = UDim2.new(0,220,0,150)
+socialMain.Position = UDim2.new(0.5,160,0.5,-75) -- nằm bên phải GUI cũ
+socialMain.BackgroundColor3 = Color3.fromRGB(35,35,35)
+socialMain.Active = true
+socialMain.Draggable = true
+
+local socialTitle = Instance.new("TextLabel", socialMain)
+socialTitle.Size = UDim2.new(1,0,0,40)
+socialTitle.BackgroundColor3 = Color3.fromRGB(20,20,20)
+socialTitle.TextColor3 = Color3.fromRGB(255,200,0)
+socialTitle.TextScaled = true
+socialTitle.Font = Enum.Font.GothamBold
+socialTitle.Text = "Support Me ❤️"
+
+local function createSocialButton(text, yPos, link)
+	local btn = Instance.new("TextButton", socialMain)
+	btn.Size = UDim2.new(0.9,0,0,40)
+	btn.Position = UDim2.new(0.05,0,0,yPos)
+	btn.BackgroundColor3 = Color3.fromRGB(70,70,70)
+	btn.TextColor3 = Color3.new(1,1,1)
+	btn.TextScaled = true
+	btn.Text = text
+	
+	btn.MouseButton1Click:Connect(function()
+		setclipboard(link)
+	end)
+end
+
+-- ĐỔI LINK CỦA BẠN VÀO ĐÂY
+createSocialButton("Subscribe on YouTube", 50, "https://youtube.com/")
+createSocialButton("Follow on TikTok", 95, "https://tiktok.com/")
